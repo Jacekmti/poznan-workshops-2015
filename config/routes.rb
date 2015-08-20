@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   resources :teachers
 
+  # TODO: as resource?
   get 'reports/subjects', to: 'reports#subjects', as: :report_subjects
 end

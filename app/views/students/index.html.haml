@@ -6,4 +6,5 @@
       %th= t('student.columns.last_name')
       %th= t('shared.actions')
   %tbody
-    = render students
+    - students.each do |student|
+      = render partial: "student", locals: {student: student}
