@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'students#index'
+  root 'visitors#index'
 
   devise_for :users
 
@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   end
 
   # TODO: as resource?
-  get 'reports/subjects', to: 'reports#subjects', as: :report_subjects
+  get 'reports/subjects', as: :report_subjects
+  # get 'visitors/index'
 end
