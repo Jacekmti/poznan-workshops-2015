@@ -108,10 +108,14 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-table.table.table-condensed {
-  margin-top: 20px;
+.little-margin-bottom {
+  margin-bottom: 20px;
 }
 
 body {
   margin-bottom: 50px;
+}
+
+.alert {
+  margin: 10px;
 }
