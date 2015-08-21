@@ -11,7 +11,7 @@ en:
     created: "%{resource} has been created!"
     updated: "%{resource} has been updated!"
     deleted: "%{resource} has been deleted!"
-    actions: actions
+    actions: Actions
     edit: edit
     show: show
     delete: delete
@@ -21,14 +21,14 @@ en:
     subjects: subjects
   student:
     columns:
-      first_name: first name
-      last_name: last name
+      first_name: First Name
+      last_name: Last Name
   teacher:
     columns:
-      first_name: first name
-      last_name: last name
-      academic_title: academic title
+      first_name: First Name
+      last_name: Last Name
+      academic_title: Academic Title
   subjects:
     columns:
       full_name: Full name
-      avg_notes: Notes avarange
+      avg_notes: Notes average
