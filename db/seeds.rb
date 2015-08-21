@@ -1,8 +1,9 @@
-puts "Seeds: start"
+puts 'Seeds: start'
 TEACHER_TITLES = %w(Dr. Prof. TA)
-User.create!(email: 'admin@admin.com',password: 'adminadmin')
+SUBJECT_ITEMS = %w(Maths Physics Chemistry Biology History)
+User.create!(email: 'admin@admin.com', password: 'adminadmin')
 
-30.times do
+3.times do
   Teacher.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -11,14 +12,14 @@ User.create!(email: 'admin@admin.com',password: 'adminadmin')
 end
 
 teachers = Teacher.all
-20.times do
+5.times do |i|
   SubjectItem.create!(
-    title: Faker::Lorem.sentence,
+    title: SUBJECT_ITEMS[i],
     teacher: teachers.sample
   )
 end
 
-40.times do
+25.times do
   Student.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name
@@ -27,12 +28,12 @@ end
 
 students = Student.all
 SubjectItem.all.each do |subject_item|
-  subject_item.students << students.sample(rand(1..4))
+  subject_item.students << students.sample(rand(1..8))
 end
 
 SubjectItem.all.each do |subject_item|
   subject_item.students.each do |student|
-    rand(1..5).times do
+    rand(3..6).times do
       subject_item.subject_item_notes << SubjectItemNote.create(student: student,
                                                                 subject_item: subject_item,
                                                                 value: rand(1..6))
@@ -40,4 +41,4 @@ SubjectItem.all.each do |subject_item|
   end
 end
 
-puts "Seeds: done"
+puts 'Seeds: done'
