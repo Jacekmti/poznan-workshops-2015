@@ -1,3 +1,5 @@
+require 'faker'
+
 puts 'Seeds: start'
 TEACHER_TITLES = %w(Dr. Prof. TA)
 SUBJECT_ITEMS = %w(Maths Physics Chemistry Biology History)
