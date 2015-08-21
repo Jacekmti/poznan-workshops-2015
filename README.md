@@ -1,4 +1,4 @@
-RoR Workshops
+RoR Workshops [![Build Status](https://travis-ci.org/misko321/poznan-workshops-2015.svg?branch=master)](https://travis-ci.org/misko321/poznan-workshops-2015)
 ================
 
 This repository is a clone [Netguru](https://netguru.co/)'s [poznan-workshops-2015](https://github.com/netguru-training/poznan-workshops-2015) repository as a part of free **Level-Up Workshops**.
