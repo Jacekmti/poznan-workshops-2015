@@ -1,14 +1,18 @@
-require 'faker'
-
 puts 'Seeds: start'
+
 TEACHER_TITLES = %w(Dr. Prof. TA)
+FIRST_NAMES = %w(Tomasz Kazimierz Zygmunt Michał Robert Kajetan Andrzej Julian Marcin Maciej
+                Błażej Anna Julia Karolina Kinga Klaudia Michalina Angelika)
+LAST_NAMES = %w(Rybarczyk Zydorek Zamrocz Sokowicz Kowalczyk Małysz Rojek Koterba
+                Wach Borowicz Mrożek Mierzej)
 SUBJECT_ITEMS = %w(Maths Physics Chemistry Biology History)
+
 User.create!(email: 'admin@admin.com', password: 'adminadmin')
 
 3.times do
   Teacher.create!(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: FIRST_NAMES.sample,
+    last_name: LAST_NAMES.sample,
     academic_title: TEACHER_TITLES.sample
   )
 end
@@ -23,8 +27,8 @@ end
 
 25.times do
   Student.create!(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name
+    first_name: FIRST_NAMES.sample,
+    last_name: LAST_NAMES.sample
   )
 end
 
