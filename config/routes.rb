@@ -11,7 +11,5 @@ Rails.application.routes.draw do
     get :subjects
   end
 
-  # TODO: as resource?
   get 'reports/subjects', as: :report_subjects
-  # get 'visitors/index'
 end

@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
 
   expose(:student, attributes: :student_params)
   expose(:student_subject_items) { student.subject_items }
-  expose(:students)
+  expose(:students) { Student.all.order(:last_name, :first_name) }
 
   def create
     if student.save
@@ -29,6 +29,6 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:first_name, :last_name, subject_item_ids: [])
+    params.require(:student).permit(:first_name, :last_name, :birthdate, subject_item_ids: [])
   end
 end
