@@ -5,6 +5,8 @@ This repository is a clone of [**Netguru**](https://netguru.co/)'s [**poznan-wor
 
 This project encompasses **basic version of app** as well as **the first of additional tasks**.
 
+[https://poznan-workshops-2015-mp.herokuapp.com](https://poznan-workshops-2015-mp.herokuapp.com)
+
 Read the original README by Netguru below. :point_down:
 
 --------------
