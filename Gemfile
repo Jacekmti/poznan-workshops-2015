@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'dotenv-rails'
 gem 'gretel'
 gem 'devise'
+gem 'date_validator'
 
 group :development do
   gem 'better_errors'
